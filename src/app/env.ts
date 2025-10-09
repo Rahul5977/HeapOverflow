@@ -8,7 +8,7 @@ const env={
         hostUrl:process.env.NEXT_PUBLIC_APPWRITE_HOST_URL || '',
         // endpoint:process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT || '', --- IGNORE ---
     },
-    apperiteApiKey:process.env.APPERITE_API_KEY || ''
+    appwriteApiKey:process.env.APPWRITE_API_KEY || ''
 }
 
 export default env;
