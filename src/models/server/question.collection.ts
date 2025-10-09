@@ -71,7 +71,7 @@ export async function createQuestionCollection() {
       databaseId: db,
       tableId: questionCollection,
       key: "content",
-      type: IndexType.Unique,
+      type: IndexType.Fulltext,
       columns: ["content"],
     }),
   ]);
