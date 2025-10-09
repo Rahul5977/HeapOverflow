@@ -48,6 +48,14 @@ export async function createCommentCollection() {
       size: 50,
       required: false,
     }),
+    //Enum column for comment type (question or answer)
+    tables.createEnumColumn({
+      databaseId: db,
+      tableId: commentCollection,
+      key: "type",
+      elements: ["question", "answer"],
+      required: true,
+    }),
   ]);
   console.log("Comment columns created");
 }

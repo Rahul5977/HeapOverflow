@@ -3,7 +3,7 @@ import { Permission } from "node-appwrite";
 import { db, voteCollection } from "../name";
 import { tables } from "./config";
 
-export default async function createVoteCollection() {
+export async function createVoteCollection() {
     // Creating Collection
     await tables.createTable({
         databaseId: db,
