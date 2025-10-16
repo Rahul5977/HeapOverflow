@@ -2,17 +2,16 @@
 import { IndexType, Permission } from "node-appwrite";
 import {questionAttachmentBucket } from "../name";
 import {storage } from "./config";
-import { log } from "console";
 
-export async function createQuestionAttachmentBucket() {
+export default async function getOrCreateStorage() {
     //get bucket
     try {
         //get bucket
         const bucket = await storage.getBucket({bucketId: questionAttachmentBucket});
-        log("Bucket already exists:", bucket);
+        console.log("Bucket already exists:", bucket);
     } catch (error) {
         // If the bucket does not exist, create it
-        log("Bucket does not exist, creating...");
+        console.log("Bucket does not exist, creating...");
         try {
             await storage.createBucket({
                 bucketId: questionAttachmentBucket,
